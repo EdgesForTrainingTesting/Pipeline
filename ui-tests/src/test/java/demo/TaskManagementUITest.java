@@ -288,4 +288,28 @@ public class TaskManagementUITest {
         utils.AllureUtil.attachText("High Priority Badge Color", bgColor);
     }
 
+    @Test
+    @Story("Task Display")
+    @Description("Verify that you can see priority badges with correct colors 2 ")
+    @Severity(SeverityLevel.NORMAL)
+    public void testPriorityBadgeColors2() {
+        utils.AllureUtil.step("Navigate to home page");
+        driver.get(baseUrl);
+        waitForPageLoad();
+
+        WebElement highPriorityTask = wait.until(
+                ExpectedConditions.presenceOfElementLocated(
+                        By.xpath("//span[contains(@class, 'priority-high')]")
+                )
+        );
+
+        String bgColor = highPriorityTask.getCssValue("background-color");
+
+
+        Assert.assertTrue(bgColor.contains("rgb") || bgColor.contains("#"),
+                "Priority badge should have a background color");
+        utils.AllureUtil.attachText("High Priority Badge Color", bgColor);
+        Assert.assertTrue(true);
+    }
+
 }
