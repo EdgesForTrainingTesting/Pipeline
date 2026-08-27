@@ -16,7 +16,8 @@ public class Task {
     private LocalDateTime dueDate;
     private String assignedTo;
     private String test;
-
+    private int feature1;
+    
     public Task(String title, String description, TaskPriority priority) {
         this.title = title;
         this.description = description;
