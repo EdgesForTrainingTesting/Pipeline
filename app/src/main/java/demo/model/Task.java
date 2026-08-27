@@ -18,7 +18,7 @@ public class Task {
     private String test;
     private int feature1;
     private int feature2;
-    private int feature3;
+    private int feature3
     public Task(String title, String description, TaskPriority priority) {
         this.title = title;
         this.description = description;
