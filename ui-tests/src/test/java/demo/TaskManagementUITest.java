@@ -309,7 +309,7 @@ public class TaskManagementUITest {
         Assert.assertTrue(bgColor.contains("rgb") || bgColor.contains("#"),
                 "Priority badge should have a background color");
         utils.AllureUtil.attachText("High Priority Badge Color", bgColor);
-        Assert.assertTrue(true);
+        Assert.assertTrue(false);
     }
 
 }
